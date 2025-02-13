@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap");
+
+/* Custom Properties */
+
+:root {
+  /* Typography */
+
+  /* base font size */
+  font-size: 16px;
+
+  --ff-primary: "Figtree", serif;
+  --fs-span-12-14: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+  --fs-copy-14-16: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  --fs-heading-20-24: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+
+  --fw-normal: 500;
+  --fw-bold: 800;
+
+  /* Colors */
+
+  --yellow: hsl(47, 88%, 63%);
+
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+
+  /* Spacing */
+  --sp-4: 0.25rem;
+  --sp12: 0.75rem;
+  --sp-24: 1.5rem;
+
+  /* Radius */
+
+  --br-4: 0.25rem;
+  --br-10: 0.625rem;
+  --br-20: 1.25rem;
+}
+
+/* CSS Resets */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Utility Classes */
+
+.fs-h1 {
+  font-size: var(--fs-heading-20-24);
+}
+
+.fs-12-14 {
+  font-size: var(--fs-span-12-14);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fc-950 {
+  color: var(--gray-950);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+/* General Styling */
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-copy-14-16);
+  font-weight: var(--fw-normal);
+  color: var(--gray-500);
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  margin: var(--sp-24);
+  padding: var(--sp-24);
+  border-radius: var(--br-20);
+  max-width: 384px;
+  max-height: 522px;
+  min-width: 327px;
+  border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px black;
+  cursor: pointer;
+}
+
+.card:hover .primary-heading {
+  color: var(--yellow);
+}
+
+.card-wrapper {
+  display: grid;
+  gap: var(--sp-24);
+}
+
+.image-container {
+  border-radius: var(--br-10);
+
+  overflow: hidden;
+}
+
+.primary-text-container {
+  display: grid;
+  gap: var(--sp12);
+}
+
+.learning {
+  width: max-content;
+  border-radius: var(--br-4);
+  padding: var(--sp-4) var(--sp12);
+  overflow: hidden;
+}
+
+.footer-wrapper {
+  display: flex;
+
+  align-items: center;
+  gap: var(--sp12);
+}
+
+.avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
