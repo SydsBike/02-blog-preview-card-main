@@ -173,7 +173,8 @@ body {
   cursor: pointer;
 }
 
-.card:hover .primary-heading {
+.card:hover .primary-heading,
+.card:focus-visible .primary-heading {
   color: var(--yellow);
 }
 
